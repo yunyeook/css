@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*자손 결합자 공백 사용*/
+      section span {
+        color: blue;
+      }
+
+      /*자식 결합자 > 사용*/
+      /*section > ul > li > span 이라고 써도 됨*/
+      li > span {
+        font-weight: 800;
+      }
+
+      /*  일반형제 결합자 ~ 사용 
+      A ~ B 라고 하면 A 이후에 나오는 B 에만 적용  */
+      p ~ span {
+        color: red;
+      }
+
+      /*  일반형제 결합자 + 사용 
+      A + B 라고 하면 A 와 인접한 B 에만 적용  */
+      p + span {
+        font-weight: 900;
+      }
+      .first + li {
+        color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>헬스</h1>
+      <hr />
+      <p>위키백과,우리 모두의 백과사전</p>
+      <p><span>헬스</span>는 기본적으로 건강을 가리키며 그 외에 다음을 가리킨다.</p>
+      <ul>
+        <li>의료</li>
+        <li>보건</li>
+        <li>체력</li>
+        <li>패션헬스</li>
+        <li>헬스클럽</li>
+        <li>구글헬스 : <span>구글</span>이 제공하는 개인의료 정보서비스</li>
+      </ul>
+    </section>
+
+    <section>
+      <span>s1 p이전 </span>
+      <p>p</p>
+      <span>s2 p인접O </span><br />
+      <code>code</code><br />
+      <span>s3 p이후 p인접X</span><br />
+    </section>
+    <hr />
+
+    <ul>
+      <li class="first">one</li>
+      <li>two</li>
+      <li>three</li>
+    </ul>
+  </body>
+</html>

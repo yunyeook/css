@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../file/태극기.ico" />
+    <title>Selector</title>
+    <style>
+      /*전체 선택자*/
+      * {
+        margin: 20;
+        padding: 10;
+        font-weight: 300;
+      }
+      /*Type 선택자*/
+      h1 {
+        font-weight: 1000;
+      }
+      h2 {
+        color: green;
+        font-weight: 1000;
+      }
+      aside {
+        border: 1px solid black;
+        width: 200px;
+        float: right;
+      }
+      main {
+        border: 1px solid black;
+        width: 300px;
+        text-align: center;
+      }
+      /*class 선택자*/
+      .redtext {
+        color: red;
+        font-weight: 700;
+      }
+      .bluetext {
+        color: blue;
+        font-style: italic;
+        font-weight: 700;
+      }
+
+      /*id 선택자*/
+      #browntext {
+        color: brown;
+        font-size: large;
+        font-weight: 700;
+      }
+
+      h3,
+      h4 {
+        font-weight: 800;
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>애국가</h1>
+    <aside>
+      <a href="https://www.mois.go.kr/chd/sub/a05/story/screen.do"
+        ><img src="../file/태극기.png" alt="태극기" width="200"
+      /></a>
+    </aside>
+    <main>
+      <h2>1절</h2>
+      <p>
+        <span class="redtext">동해</span>물과 백두산이 마르고 닳도록 <br />
+        하느님이 보우하사 우리나라 만세<br />
+        무궁화 삼천리 화려 강산<br />
+        대한 사람 <span class="redtext">대한</span>으로 길이 보전하세
+      </p>
+      <h2>2절</h2>
+      <p>
+        <span class="bluetext">남산</span> 위에 저 <span class="bluetext">소나무</span> 철갑을 두른 듯<br />
+        바람 서리 불변함은 우리 기상일세<br />
+        무궁화 삼천리 화려 강산<br />
+        대한 사람 대한으로 길이 보전하세
+      </p>
+      <h2>3절</h2>
+      <p>
+        <span id="browntext">가을</span> 하늘 공활한데 높고 구름 없이<br />
+        밝은 달은 우리 가슴 일편단심일세<br />
+        무궁화 삼천리 화려 강산<br />
+        대한 사람 대한으로 길이 보전하세
+      </p>
+      <h2>4절</h2>
+      <p>
+        이 기상과 이 맘으로 충성을 다하여<br />
+        괴로우나 즐거우나 나라 사랑하세<br />
+        무궁화 삼천리 화려 강산<br />
+        대한 사람 대한으로 길이 보전하세
+      </p>
+    </main>
+    <h3>h3제목</h3>
+    <h4>h4제목</h4>
+  </body>
+</html>
