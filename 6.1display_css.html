@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display</title>
+    <style>
+      div,
+      h2 {
+        border: 1px solid black;
+      }
+      span {
+        border: 1px solid black;
+      }
+      .none {
+        display: none; /*보이지도 않고 영역을 차지하지도 않는다.*/
+      }
+      .hidden {
+        visibility: hidden; /* 보이지만 않을 뿐 영역을 차지한다. */
+      }
+      /*
+      태그는 태그명만 쓰고 -> .태그명 써서 오류찾는데 오래걸림!!!!!!!!!!!
+      클래스명은 .클래스명
+      아이디명은 #아이디명
+      같은자식이라도 따로따로 선언해야함!!
+      */
+      article > div,
+      article > span {
+        display: inline-block;
+        width: 100px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Display none</h1>
+    <div class="none">content</div>
+    <div class="none">content</div>
+    <div class="none">content</div>
+    <hr />
+    <h1>visibility : hidden</h1>
+    <div class="hidden">content</div>
+    <div class="hidden">content</div>
+    <div class="hidden">content</div>
+    <hr />
+    <h1>Display block</h1>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <h2>title</h2>
+    <hr />
+    <h1>Display inline</h1>
+    <span>content</span>
+    <span>content</span>
+    <span>content</span>
+    <hr />
+    <article>
+      <h1>Display inline-block</h1>
+      <div>content</div>
+      <div>content</div>
+      <div>content</div>
+      <span>content</span>
+      <span>content</span>
+      <span>content</span>
+    </article>
+  </body>
+</html>
