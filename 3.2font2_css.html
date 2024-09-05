@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        font-size: 16px;
+      }
+      .content {
+        font-size: 3vh;
+        border: 1px dotted black;
+        width: 22vh;
+      }
+      .center {
+        text-align: center;
+      }
+      .left {
+        text-align: left;
+      }
+      .right {
+        text-align: right;
+      }
+      .deepfakeArticle {
+        /*line-height : 줄간격
+        letter-spacing : 글자 간격
+        word-spacing : 단어 간격
+        text-indent : 들여쓰기
+        */
+        line-height: 2rem;
+        letter-spacing: 0.03rem;
+        word-spacing: 10px;
+        text-indent: 50px;
+      }
+      [class*='trans'] {
+        color: red;
+      }
+      .transform {
+        /*text-transform : 대->소 lowercase, 소-> 대문자 바꾸기uppercase*/
+        text-transform: uppercase;
+      }
+      .transform2 {
+        text-transform: lowercase;
+      }
+      /*- text-decoration 글자의 장식 선모양 설정
+    - text-decoration-line: none(없음), underline, overline, line-through(취소선);
+    - text-decoration-thickness: 숫자로 지정
+    - text-decoration-style: wavy(물결), solid, dotted, dashed(긴 점선), double
+    - text-decoration-colorn:색상선택
+    */
+      a[href='decoration'] {
+        text-decoration: dashed underline green;
+      }
+      .decoration {
+        text-decoration: wavy line-through green 2px;
+      }
+      /*text-shadow 가로(양수=우측, 음수=좌측) 세로(양수=아래, 음수=위) 번짐정도 : 글자 그림자 넣기 */
+      .shadow {
+        text-shadow: 10px 2px 2px rgb(150, 150, 84);
+      }
+      .shadow2 {
+        text-shadow: -10px -3px 3px rgb(150, 150, 84);
+      }
+      ul {
+        list-style: square;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p class="content center">여행가고싶다</p>
+      <p class="content right">여행가고싶다</p>
+      <p class="content left">여행가고싶다.</p>
+    </section>
+    <section>
+      <p class="deepfakeArticle">
+        딥페이크(deepfake), 딥 러닝<span class="transform">(deep learning)</span>과 가짜(fake)의 혼성어로 인공 지능을
+        기반으로 한 <a href="decoration">이미지</a> 합성 기술이다. 생성적 적대 신경망<span class="transform2"
+          >(GAN)</span
+        >라는 기계 학습 기술을 사용하여,
+        <span class="decoration">기존의 사진이나 영상을 원본이 되는 사진이나 영상에 겹쳐서 만들어낸다.</span>
+      </p>
+    </section>
+    <section>
+      <h2 class="shadow">그림자분신술</h2>
+      <h2 class="shadow2">그림자분신술</h2>
+    </section>
+    <ul>
+      <h2>list style</h2>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </body>
+</html>
