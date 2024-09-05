@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+      main,
+      section,
+      article,
+      div {
+        border: 1px solid black;
+        padding: 10px;
+      }
+      main {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: rgb(255, 255, 186);
+      }
+      section {
+        background-color: antiquewhite;
+        position: relative;
+      }
+      article {
+        background-color: rgb(216, 255, 197);
+      }
+      div {
+        background-color: skyblue;
+      }
+      div.relative {
+        /*자기 자신기준으로 */
+        position: relative;
+        top: 10px;
+        left: 10px;
+      }
+      div.absolute {
+        /*static아닌 부모(조상)기준인데 그런 부모나 조상 없으면 body기준*/
+        position: absolute;
+        background-color: gray;
+        top: 0px; /*가장 가까운 부모중 stacic이 아닌 position을 가진 section을 기준으로 위치 선정됨*/
+        right: 200px;
+      }
+      div.fixed {
+        /*뷰포트 기준*/
+        position: fixed;
+        bottom: 30px;
+        right: 100px;
+        border-radius: 50px;
+        box-shadow: 5px 5px 3px gray;
+      }
+      div.sticky {
+        /*스크롤 임게점만나면 고정*/
+        position: sticky;
+        top: 0;
+      }
+      div.sticky2 {
+        position: sticky;
+        width: 100px;
+        height: 20px;
+        text-align: center;
+        border-radius: 30px;
+        bottom: 100px; /*top을 제외한 속성은 fixed처럼 고정됨..*/
+        left: 300px;
+      }
+      div.z1 {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        top: -200px;
+        left: 30px;
+        background-color: pink;
+        border-radius: 50%;
+        padding-top: 20px;
+        box-sizing: border-box;
+
+        z-index: 1;
+      }
+      div.z2 {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        padding-top: 20px;
+        box-sizing: border-box;
+        background-color: violet;
+        top: 0;
+        border-radius: 50%;
+        /*z-index : 숫자가 높을수록 앞에 온다*/
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      main
+      <section>
+        section
+        <article>
+          article
+          <div>static</div>
+          <div class="relative">relative</div>
+          <div class="absolute">absolute</div>
+          <div class="fixed">fixed</div>
+          <div class="sticky">sticky</div>
+          <div class="z1">z-index1</div>
+          <div class="z2">z-index2</div>
+
+          <p>
+            <br />
+            한참을 하늘을 보고 걸어 갔어<br />
+            내 지난 사랑은 온통<br />
+            미련으로 가득한데<br />
+            사랑이 있다는 말은 믿지 않아<br />
+            그렇게 그렇게 그저 살아<br />
+            사는 게 힘겨워서<br />
+            버거워서 무너지고 싶던<br />
+            그 날에 햇살처럼 그댄 내게 왔다<br />
+            그대가 내 안에 박혔다<br />
+            그대가 내 맘을 녹였다 그대가<br />
+            나밖에 몰랐던 내가<br />
+            사랑을 배워가고 있다<br />
+            겨울같은 시간이 와도<br />
+            꽃은 꺾지 않겠다<br />
+            나 이제야 이제야 숨을 쉰다<br />
+            너와<br />
+            사는 게 힘겨워서<br />
+            버거워서 무너지고 싶던<br />
+            그 날에 햇살처럼 그댄 내게 왔다<br />
+            그대가 내 안에 박혔다<br />
+            그대가 내 맘을 녹였다 그대가<br />
+            나밖에 몰랐던 내가<br />
+            사랑을 배워가고 있다<br />
+            겨울같은 시간이 와도<br />
+            꽃은 꺾지 않겠다<br />
+            나 이제야 이제야 숨을 쉰다<br />
+            너와<br />
+            한없이 춥기만 했던<br />
+            어둡던 지난 밤들은<br />
+            오늘을 위한 시련이었다<br />
+            흩어진 내 맘이 길을 잃어도<br />
+            아픈 시간이 와도<br />
+            그대와 함께 걷겠다<br />
+            내 전부를 걸겠다<br />
+            그대와<br />
+            그대가 내 안에 박혔다<br />
+            그대가 내 맘을 녹였다 그대가<br />
+            나밖에 몰랐던 내가<br />
+            사랑을 배워가고 있다<br />
+            겨울같은 시간이 와도<br />
+            꽃은 꺾지 않겠다<br />
+            나 이제야 이제야 꿈을 꾼다<br />
+            너와<br />
+          </p>
+          <div class="sticky2">==sticky==</div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
