@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>border</title>
+    <style>
+      .네모 {
+        border: 1px dashed black;
+        border-radius: 10px;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        margin: 10px;
+      }
+      .border {
+        border-top: 2px dotted red;
+        border-right: 3px solid orange;
+        border-bottom: 2px dashed yellow;
+        border-left: 3px dotted green;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+      }
+      .border-box {
+        border: 10px solid red;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        box-sizing: border-box;
+        padding: 20px;
+      }
+      .content-box {
+        border: 10px solid blue;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        box-sizing: content-box;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="네모">네모</div>
+    <div class="border"></div>
+    <div class="border-box"></div>
+    <div class="content-box"></div>
+  </body>
+</html>
