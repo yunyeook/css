@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradation</title>
+    <style>
+      .linear-gradient {
+        width: 500px;
+        height: 200px;
+        border: 1px solid black;
+        /* background: linear-gradient(to right top, red, yellow, blue)*/
+        background: linear-gradient(60deg, red 20%, blue 40%, yellow 100%);
+      }
+      .radial-gradient {
+        width: 500px;
+        height: 200px;
+        border: 1px solid black;
+        background: radial-gradient(circle at 10% 20%, white, yellow);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>linear-gradient</h2>
+    <div class="linear-gradient"></div>
+    <h2>radial-gradient</h2>
+    <div class="radial-gradient"></div>
+  </body>
+</html>
