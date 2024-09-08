@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        font-size: 30px;
+      }
+      /*방문안한 링크*/
+      a:link {
+        color: red;
+      }
+      /*방문한 링크*/
+      a:visited {
+        color: blue;
+      }
+      /*마우스 올릴때*/
+      a:hover {
+        color: green;
+        font-weight: 900;
+      }
+      fieldset:hover {
+        background-color: lightgray;
+        box-shadow: 0 0 20px gray;
+      }
+      /*마우스 클릭했을때*/
+      a:active {
+        color: yellow;
+      }
+      .field {
+        margin-bottom: 10px;
+      }
+
+      /*input에 입력하려고 탭할때*/
+      input:focus {
+        outline: none;
+        color: red;
+        box-shadow: 0 0 20px;
+      }
+      /*홀수에만 적용*/
+      li:nth-child(odd) {
+        background-color: rgb(255, 193, 193);
+      }
+      /*target 클래스를 제외한 li 요소에 스타일을 적용하겠다는 의미*/
+      li:not(.target) {
+        font-size: 30px;
+      }
+
+      /*가상 요소*/
+      /*required클래스 앞에 * 이라는 내용 삽입 */
+      .required::before {
+        content: '*';
+        margin-right: 2px;
+        color: red;
+        font-size: 20px;
+      }
+      [data-tooltip] {
+        position: relative;
+      }
+      /* 복습> position : absolute (static이 아닌 조상의 위치를 기준으로 함)*/
+      [data-tooltip]:hover::after {
+        content: attr(data-tooltip); /*attr 속성의 값을 가져오는 방법*/
+        position: absolute;
+        width: 250px;
+        left: 70px;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+      }
+      /*letter클래스의 첫글자에만 적용*/
+      .letter::first-letter {
+        font-size: 60px;
+        color: blue;
+      }
+      /*line클래스의 첫 줄에만 적용*/
+      .line::first-line {
+        background-color: rgb(255, 255, 141);
+        color: blue;
+      }
+      /*p태그 내용의 드래그한 부분에 적용*/
+      p::selection {
+        background-color: blue;
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Pseudo Class</legend>
+      <div>
+        <a href="http://www.naver.com">네이버</a>
+        <a href="http://www.google.com">구글</a>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>focus, before, after</legend>
+      <div class="field">
+        <label class="required" for="name">이름</label>
+        <input type="text" id="name" />
+      </div>
+      <div class="field">
+        <label class="required" for="age">나이</label>
+        <input type="number" id="age" min="1" />
+      </div>
+      <button data-tooltip="이 버튼을 클릭하면 입력한 정보를 보냅니다.">보내기</button>
+    </fieldset>
+    <fieldset>
+      <legend>nth-chile, not</legend>
+      <ul>
+        <li class="target">1 content</li>
+        <li>2 content</li>
+        <li>3 content</li>
+        <li>4 content</li>
+        <li>5 content</li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>first-letter, first-line</legend>
+      <div>
+        <p class="letter">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio a, consectetur corporis accusamus culpa
+          aspernatur quos quaerat nisi quam soluta, asperiores dolorum animi natus reiciendis cumque rem placeat
+          voluptas quo!
+        </p>
+        <p class="line">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, sunt inventore tenetur qui placeat nam
+          animi consequatur ducimus itaque omnis dignissimos a laudantium perferendis doloremque distinctio atque
+          repellat quae deserunt.
+        </p>
+      </div>
+    </fieldset>
+  </body>
+</html>
