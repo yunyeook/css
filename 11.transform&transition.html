@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform, Transition</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: lightgray;
+      }
+      .outline,
+      .box {
+        width: 60px;
+        height: 60px;
+      }
+      .outline {
+        border: 5px solid yellow;
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+      .box {
+        background-color: rgb(109, 109, 249);
+      }
+      .box1 {
+        transform: translate(10px, 10px);
+        transition-property: width, height, background-color;
+        transition-duration: 1s;
+        /*transition-delay: 1s;*/
+        transition-timing-function: ease-out;
+      }
+      .box2 {
+        transform: scaleX(3);
+        transition-property: width, transform;
+        transition-duration: 2s;
+      }
+      .box3 {
+        transform: rotate(45deg);
+      }
+      /*.outline-box3 {
+        perspective: 40px;
+      }*/
+      .box4 {
+        transform: skewY(45deg);
+      }
+      /*Transition*/
+      .box1:hover {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+      .box2:hover {
+        width: 200px;
+        height: 200px;
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outline">
+      <div class="box box1"></div>
+    </div>
+    <div class="outline">
+      <div class="box box2"></div>
+    </div>
+    <div class="outline outline-box3">
+      <div class="box box3"></div>
+    </div>
+    <div class="outline">
+      <div class="box box4"></div>
+    </div>
+  </body>
+</html>
