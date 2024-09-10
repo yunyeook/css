@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex-container {
+        background-color: rgb(158, 239, 255);
+        height: 100vh;
+        display: flex;
+      }
+      .flex-item {
+        width: 200px;
+        height: 100px;
+        background-color: skyblue;
+        text-align: center;
+        border: 2px white solid;
+      }
+      .item1 {
+        flex-grow: 2;
+      }
+      .item2 {
+        flex-shrink: 2;
+      }
+      .item3 {
+        /*순서정하기 적을수록 앞쪽 근데 잘안씀..*/
+        order: 5;
+      }
+      .item4 {
+        flex: 2 3 auto;
+      }
+      .item5 {
+        align-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item item1">1</div>
+      <div class="flex-item item2">2</div>
+      <div class="flex-item item3">3</div>
+      <div class="flex-item item4">4</div>
+      <div class="flex-item item5">5</div>
+    </div>
+  </body>
+</html>

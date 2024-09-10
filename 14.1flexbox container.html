@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex-container {
+        background-color: rgb(158, 239, 255);
+        height: 100vh;
+        display: flex;
+        /*flex item 배치  reverse=역방향
+        flex-direction: column-reverse;*/
+        flex-direction: column;
+        /*wrap 개행(줄바꿈) 많이 사용한다.!*/
+        flex-wrap: wrap;
+        /*자주사용!!*/
+        justify-content: space-between;
+        /* align-content: end; 전체를 한묶음으로 봐서 정렬*/
+        align-items: center; /*item하나하나 각각을 기준으로 정렬*/
+      }
+      .flex-item {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        text-align: center;
+        border: 2px white solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">4</div>
+      <div class="flex-item">5</div>
+      <div class="flex-item">6</div>
+      <div class="flex-item">7</div>
+      <div class="flex-item">8</div>
+      <div class="flex-item">9</div>
+      <div class="flex-item">10</div>
+      <div class="flex-item">11</div>
+      <div class="flex-item">12</div>
+      <div class="flex-item">13</div>
+      <div class="flex-item">14</div>
+      <div class="flex-item">15</div>
+    </div>
+  </body>
+</html>
